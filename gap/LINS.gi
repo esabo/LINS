@@ -111,7 +111,7 @@ function(r)
     return LINS_allNodes(r, MinimalSupergroups);
 end);
 
-InstallMethod( Subgroups, "for Lins Node", [ IsLinsNode],
+InstallMethod( SubgroupsLINS, "for Lins Node", [ IsLinsNode],
 function(r)
     return LINS_allNodes(r, MinimalSubgroups);
 end);

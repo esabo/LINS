@@ -72,7 +72,7 @@ InstallGlobalFunction( LINS_FindIntersections, function(gr, rH, opts)
     H := Grp(rH);
     n := IndexBound(gr);
     allSupergroups := Supergroups(rH);
-    allSubgroups := Subgroups(rH);
+    allSubgroups := SubgroupsLINS(rH);
     nrFound := 0;
 
     # Main iteration over all preceding groups in `gr`
@@ -102,7 +102,7 @@ InstallGlobalFunction( LINS_FindIntersections, function(gr, rH, opts)
             fi;
 
             # Check if the intersection has been already computed
-            xgroups := Subgroups(rK);
+            xgroups := SubgroupsLINS(rK);
             subs := Filtered(allSubgroups, s -> s in xgroups);
             if opts.DoIntersection(gr, rH, rK, index) and not (index in List(subs, Index)) then
                 Info(InfoLINS, 3, LINS_tab3,

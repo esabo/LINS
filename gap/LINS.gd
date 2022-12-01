@@ -106,7 +106,7 @@ DeclareOperation( "Supergroups", [IsLinsNode]);
 ## </Description>
 ## </ManSection>
 ## <#/GAPDoc>
-DeclareOperation( "Subgroups", [IsLinsNode]);
+DeclareOperation( "SubgroupsLINS", [IsLinsNode]);
 
 
 #############################################################################
